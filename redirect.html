@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please wait...</title>
+</head>
+<body>
+    <script>
+        // plz dont steal
+        const params = new URLSearchParams(window.location.search);
+        const service = params.get("service");
+        
+        let url;
+
+        switch (service) {
+            case "github": url = "https://github.com/HackySoft";
+            case "discord": url = "https://dsc.gg/bsre1";
+            case "telegram": url = "https://t.me/bsre1";
+        }
+
+        window.location.replace(url);
+    </script>
+</body>
+</html>
