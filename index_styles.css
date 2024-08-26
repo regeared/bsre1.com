@@ -1,10 +1,45 @@
 .title {
-    color: whitesmoke;
+    color: #F8F8F2;
     text-align: center;
-    font-size: 100px;
+    font-size: 15vh;
     margin-top: 50px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 900;
+}
+.header-link {
+    color: #F8F8F2 !important;
+    text-decoration: none;
+    font-size: 4vh;
+    font-family: 'New Amsterdam', cursive;
 }
 
 body {
-    background-color: #726E6D;
+    background-color: #282A36;
+}
+
+.navbar-logo {
+    height: 18.3vh;
+    width: auto;
+    max-height: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .navbar {
+        height: 120px !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .navbar {
+        height: 120px !important;
+    }
+}
+
+.dark-bg {
+    background-color: #44475A !important;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
