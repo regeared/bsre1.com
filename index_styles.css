@@ -6,11 +6,17 @@
     font-family: 'Fredoka', sans-serif;
     font-weight: 900;
 }
+
 .header-link {
     color: #F8F8F2 !important;
     text-decoration: none;
     font-size: 4vh;
     font-family: 'New Amsterdam', cursive;
+    margin-left: 20px;
+}
+
+.header-link:hover {
+    color: #bdbdb7 !important;
 }
 
 body {
@@ -21,6 +27,13 @@ body {
     height: 18.3vh;
     width: auto;
     max-height: 100%;
+    margin-left: 7px;
+}
+.navbar-discord-logo {
+    height: 5vh;
+    width: auto;
+    max-height: 100%;
+    margin-right: 7px;
 }
 
 @media screen and (min-width: 800px) {
@@ -42,4 +55,66 @@ body {
 .navbar-brand {
     display: flex;
     align-items: center;
+}
+
+.dropdown-menu {
+    margin-left: 20px;
+    background-color: #3E4867 !important;
+}
+
+.dropdown-item {
+    color: #F8F8F2 !important;
+    font-family: 'Grandstander';
+}
+
+.dropdown-item:hover {
+    background-color: #4A577E !important;
+}
+
+@media (min-width: 768px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
 }
