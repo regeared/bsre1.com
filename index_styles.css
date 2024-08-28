@@ -79,7 +79,9 @@ body {
 .dropdown-item:hover {
     background-color: #4A577E !important;
 }
-
+.content {
+    min-height: 68vh;
+}
 @media (min-width: 768px) {
     .animate {
         animation-duration: 0.3s;
@@ -134,6 +136,15 @@ body {
     border-radius: 10%;
     align-items: center;
     justify-content: center;
+}
+.footer-discord-link {
+    color: #5865F2 !important;
+}
+.footer-telegram-link {
+    color: #2AABEE !important;
+}
+.footer-github-link {
+    color: #F8F8F2 !important;
 }
 .footer-link:hover {
     background:fixed;
