@@ -1,3 +1,6 @@
 .content {
     margin-top: 30vh !important;
 }
+.remove-underscore {
+    text-decoration: none;
+}

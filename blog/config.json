@@ -1,0 +1,15 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "title": "Hello World",
+            "date": "2021-06-01",
+            "tags": ["hello", "world"],
+            "read_time": "1 min",
+            "author": "RemoteAccess",
+            "author-avatar": "https://cdn.discordapp.com/avatars/930425509312069653/75afcb3feb7333d74b575d22a395976e.webp?size=128",
+            "background-picture": "https://depositphotos.com/photos/examples.html",
+            "file": "hello-world.md"
+        }
+    ]
+}
