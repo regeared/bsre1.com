@@ -6,6 +6,14 @@
     font-family: 'Fredoka', sans-serif;
     font-weight: 900;
 }
+.subtitle {
+    color: #F8F8F2;
+    text-align: center;
+    font-size: 3vh;
+    font-family: 'Grandstander', cursive;
+    font-weight: 400;
+    margin-top: -15px;
+}
 
 .header-link {
     color: #F8F8F2 !important;
@@ -34,6 +42,7 @@ body {
     width: auto;
     max-height: 100%;
     margin-right: 7px;
+    margin-left: 7px;
 }
 
 @media screen and (min-width: 800px) {
@@ -58,7 +67,7 @@ body {
 }
 
 .dropdown-menu {
-    margin-left: 20px;
+    margin-left: 20px !important;
     background-color: #3E4867 !important;
 }
 
@@ -117,4 +126,30 @@ body {
 .slideIn {
     -webkit-animation-name: slideIn;
     animation-name: slideIn;
+}
+.footer-link {
+    color: #5865F2 !important;
+    background: none;
+    border-color: #282A36;
+    border-radius: 10%;
+    align-items: center;
+    justify-content: center;
+}
+.footer-link:hover {
+    background:fixed;
+    background-color: #282A36;
+}
+.footer-container {
+    background-color: #44475A !important; 
+    bottom: 0px !important;
+    position: relative;
+    width: 100%;
+}
+.footer-copyright {
+    background-color: #0000000d;
+    color: #F8F8F2 !important;
+}
+.footer-copyright-link {
+    color: #F8F8F2 !important;
+    text-decoration: none;
 }
