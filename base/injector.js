@@ -5,13 +5,13 @@ function inject() {
   let header;
   let footer;
 
-  fetch("base/header.html")
+  fetch("/base/header.html")
     .then((response) => response.text())
     .then((data) => {
       header = data;
       injectable_header.innerHTML = header;
     });
-  fetch("base/footer.html")
+  fetch("/base/footer.html")
     .then((response) => response.text())
     .then((data) => {
       footer = data;
