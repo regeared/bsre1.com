@@ -1,24 +1,38 @@
 .title {
     color: #F8F8F2;
     text-align: center;
-    font-size: 15vh;
-    margin-top: 50px;
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.95;
+    margin: 0;
     font-family: 'Fredoka', sans-serif;
     font-weight: 900;
 }
+
+.eyebrow {
+    color: #8BE9FD;
+    font-family: 'Grandstander', cursive;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .subtitle {
     color: #F8F8F2;
     text-align: center;
-    font-size: 3vh;
+    font-size: clamp(1.1rem, 2.5vw, 1.55rem);
     font-family: 'Grandstander', cursive;
     font-weight: 400;
-    margin-top: -15px;
+    margin: 18px auto 0;
+    max-width: 680px;
 }
 
 .header-link {
     color: #F8F8F2 !important;
     text-decoration: none;
-    font-size: 4vh;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
     font-family: 'New Amsterdam', cursive;
     margin-left: 20px;
 }
@@ -29,16 +43,18 @@
 
 body {
     background-color: #282A36;
+    min-height: 100vh;
 }
 .navbar {
     top: 0;
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 .navbar-logo {
     height: 18.3vh;
     width: auto;
-    max-height: 100%;
+    max-height: 96px;
     margin-left: 7px;
 }
 .navbar-discord-logo {
@@ -84,9 +100,169 @@ body {
     background-color: #4A577E !important;
 }
 .content {
-    min-height: 68vh;
-    margin-top: 200px !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 0 !important;
+    min-height: calc(100vh - 140px);
+    padding: 180px 20px 64px;
 }
+
+.link-hero {
+    width: min(100%, 980px);
+}
+
+.link-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 44px auto 0;
+}
+
+.link-card {
+    align-items: center;
+    background-color: #3E4867;
+    border: 1px solid #6272A4;
+    border-radius: 8px;
+    color: #F8F8F2;
+    display: flex;
+    gap: 16px;
+    min-height: 112px;
+    padding: 22px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.link-card:hover {
+    background-color: #4A577E;
+    border-color: #8BE9FD;
+    color: #F8F8F2;
+    transform: translateY(-3px);
+}
+
+.link-icon {
+    align-items: center;
+    background-color: #282A36;
+    border-radius: 8px;
+    display: inline-flex;
+    flex: 0 0 58px;
+    font-size: 1.85rem;
+    height: 58px;
+    justify-content: center;
+}
+
+.link-card strong {
+    display: block;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.1;
+}
+
+.link-card small {
+    color: #CFCFDB;
+    display: block;
+    font-family: 'Grandstander', cursive;
+    font-size: 0.98rem;
+    margin-top: 6px;
+    overflow-wrap: anywhere;
+}
+
+.discord-card .link-icon,
+.footer-discord-link {
+    color: #5865F2 !important;
+}
+
+.telegram-card .link-icon,
+.footer-telegram-link {
+    color: #2AABEE !important;
+}
+
+.github-card .link-icon,
+.footer-github-link {
+    color: #F8F8F2 !important;
+}
+
+.purchase-card .link-icon,
+.footer-purchase-link {
+    color: #50FA7B !important;
+}
+
+.products-section {
+    margin: 74px auto 0;
+}
+
+.section-title {
+    color: #F8F8F2;
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin: 0;
+    text-align: center;
+}
+
+.section-copy {
+    color: #CFCFDB;
+    font-family: 'Grandstander', cursive;
+    font-size: 1.08rem;
+    line-height: 1.6;
+    margin: 18px auto 0;
+    max-width: 860px;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 34px;
+}
+
+.product-panel {
+    background-color: #34384F;
+    border: 1px solid #6272A4;
+    border-radius: 8px;
+    color: #F8F8F2;
+    padding: 24px;
+}
+
+.product-panel-wide {
+    grid-column: 1 / -1;
+}
+
+.product-panel h3 {
+    color: #8BE9FD;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 0 14px;
+}
+
+.product-panel ul {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.product-panel li {
+    color: #E6E6EF;
+    font-family: 'Grandstander', cursive;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    padding-left: 20px;
+    position: relative;
+}
+
+.product-panel li::before {
+    color: #50FA7B;
+    content: "✓";
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+}
+
 @media (min-width: 768px) {
     .animate {
         animation-duration: 0.3s;
@@ -142,15 +318,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-.footer-discord-link {
-    color: #5865F2 !important;
-}
-.footer-telegram-link {
-    color: #2AABEE !important;
-}
-.footer-github-link {
-    color: #F8F8F2 !important;
-}
 .footer-link:hover {
     background:fixed;
     background-color: #282A36;
@@ -168,4 +335,42 @@ body {
 .footer-copyright-link {
     color: #F8F8F2 !important;
     text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar-logo {
+        height: 84px;
+    }
+
+    .content {
+        min-height: auto;
+        padding-top: 56px;
+    }
+
+    .header-link {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .link-card {
+        min-height: 96px;
+        padding: 18px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-panel-wide {
+        grid-column: auto;
+    }
 }
