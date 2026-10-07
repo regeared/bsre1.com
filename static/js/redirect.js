@@ -13,7 +13,7 @@ switch (service) {
     break;
   }
   case "telegram": {
-    url = "https://t.me/bsre1";
+    url = "https://t.me/getregeared";
     break;
   }
   case "purchase": {
