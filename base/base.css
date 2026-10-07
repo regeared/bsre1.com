@@ -191,6 +191,19 @@ body {
     margin: 74px auto 0;
 }
 
+.opt-out-callout {
+    margin: 74px auto 0;
+}
+
+.opt-out-callout .link-card {
+    margin: 28px auto 0;
+    max-width: 420px;
+}
+
+.opt-out-card .link-icon {
+    color: #FF5555 !important;
+}
+
 .section-title {
     color: #F8F8F2;
     font-family: 'Fredoka', sans-serif;

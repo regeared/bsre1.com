@@ -1,0 +1,170 @@
+.opt-out-hero {
+    width: min(100%, 820px);
+}
+
+.opt-out-title {
+    font-size: clamp(3.4rem, 10vw, 6.5rem);
+}
+
+.opt-out-panel {
+    background-color: #34384F;
+    border: 1px solid #6272A4;
+    border-radius: 8px;
+    color: #F8F8F2;
+    margin: 40px auto 0;
+    max-width: 560px;
+    padding: 28px 24px;
+}
+
+.opt-out-label {
+    color: #8BE9FD;
+    display: block;
+    font-family: 'Grandstander', cursive;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.opt-out-row {
+    align-items: center;
+    background-color: #282A36;
+    border: 1px solid #6272A4;
+    border-radius: 8px;
+    display: flex;
+    padding: 0 14px;
+    transition: border-color 0.15s ease;
+}
+
+.opt-out-row:focus-within {
+    border-color: #8BE9FD;
+}
+
+.opt-out-hash {
+    color: #6272A4;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.opt-out-input {
+    background: transparent;
+    border: 0;
+    color: #F8F8F2;
+    flex: 1;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    min-width: 0;
+    outline: none;
+    padding: 12px 0;
+    text-transform: uppercase;
+}
+
+.opt-out-input::placeholder {
+    color: #4F5675;
+    letter-spacing: 0.08em;
+}
+
+.opt-out-help {
+    color: #CFCFDB;
+    font-family: 'Grandstander', cursive;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 10px 0 0;
+}
+
+.opt-out-actions {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 22px;
+}
+
+.opt-out-btn {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 16px;
+    transition: transform 0.1s ease, background-color 0.15s ease, opacity 0.15s ease;
+}
+
+.opt-out-btn:active {
+    transform: translateY(1px);
+}
+
+.opt-out-btn[disabled] {
+    cursor: wait;
+    opacity: 0.6;
+}
+
+.opt-out-btn-primary {
+    background-color: #FF5555;
+    color: #282A36;
+}
+
+.opt-out-btn-primary:hover {
+    background-color: #FF7B7B;
+}
+
+.opt-out-btn-secondary {
+    background-color: transparent;
+    border-color: #6272A4;
+    color: #F8F8F2;
+}
+
+.opt-out-btn-secondary:hover {
+    background-color: #3E4867;
+}
+
+.opt-out-status {
+    border-radius: 8px;
+    font-family: 'Grandstander', cursive;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 18px 0 0;
+    min-height: 1.5em;
+    padding: 0;
+}
+
+.opt-out-status.is-success {
+    background-color: rgba(80, 250, 123, 0.12);
+    border: 1px solid #50FA7B;
+    color: #50FA7B;
+    padding: 10px 14px;
+}
+
+.opt-out-status.is-error {
+    background-color: rgba(255, 85, 85, 0.12);
+    border: 1px solid #FF5555;
+    color: #FF9B9B;
+    padding: 10px 14px;
+}
+
+.opt-out-status.is-pending {
+    color: #CFCFDB;
+}
+
+.opt-out-faq {
+    margin: 64px auto 0;
+}
+
+.opt-out-faq-title {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+}
+
+@media screen and (max-width: 520px) {
+    .opt-out-actions {
+        grid-template-columns: 1fr;
+    }
+}
