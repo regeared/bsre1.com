@@ -18,6 +18,12 @@
     return "#" + body;
   }
 
+  function track(action, result, status) {
+    if (window.regearedAnalytics) {
+      window.regearedAnalytics.capture("opt_out_submit", { action: action, result: result, status: status || null });
+    }
+  }
+
   function setStatus(kind, text) {
     status.className = "opt-out-status" + (kind ? " is-" + kind : "");
     status.textContent = text || "";
@@ -42,6 +48,7 @@
     var tag = canonicalPlayerTag(input.value);
     if (!tag) {
       setStatus("error", "Enter a valid player tag. Allowed characters: 0 2 8 9 P Y L Q G R J C U V.");
+      track(action, "invalid_tag");
       input.focus();
       return;
     }
@@ -58,6 +65,7 @@
     })
       .then(function (res) {
         if (res.status === 204) {
+          track(action, "success", 204);
           setStatus(
             "success",
             action === "opt-out"
@@ -69,9 +77,13 @@
         return res
           .json()
           .catch(function () { return null; })
-          .then(function (body) { setStatus("error", describeError(res, body)); });
+          .then(function (body) {
+            track(action, res.status === 429 ? "rate_limited" : res.status === 403 ? "blocked" : "error", res.status);
+            setStatus("error", describeError(res, body));
+          });
       })
       .catch(function () {
+        track(action, "network_error");
         setStatus("error", "Could not reach the opt-out service. Check your connection and try again.");
       })
       .then(function () { setBusy(false); });
